@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Application Details | Brookdell College
+    </title>
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f7fb;
+
+            margin: 0;
+
+        }
+
+
+        header {
+
+            background: #123c69;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+        }
+
+
+        .container {
+
+            max-width: 800px;
+
+            margin: 30px auto;
+
+            padding: 20px;
+
+        }
+
+
+        .box {
+
+            background: white;
+
+            padding: 30px;
+
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+
+            box-shadow:
+            0 4px 10px
+            rgba(0,0,0,0.1);
+
+        }
+
+
+        h2 {
+
+            color: #123c69;
+
+        }
+
+
+        .info {
+
+            padding: 12px 0;
+
+            border-bottom:
+            1px solid #eee;
+
+        }
+
+
+        .label {
+
+            font-weight: bold;
+
+            color: #123c69;
+
+        }
+
+
+        .status {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+        }
+
+
+        .pending {
+
+            color: #f57c00;
+
+        }
+
+
+        .approved {
+
+            color: #2e7d32;
+
+        }
+
+
+        .rejected {
+
+            color: #c62828;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            color: white;
+
+            text-decoration: none;
+
+            border: none;
+
+            border-radius: 5px;
+
+            margin-top: 10px;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+        }
+
+
+        .back {
+
+            background: #123c69;
+
+        }
+
+
+        .approve {
+
+            background: #2e7d32;
+
+        }
+
+
+        .reject {
+
+            background: #f57c00;
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+
+        Brookdell College
+
+    </h1>
+
+
+    <p>
+
+        Student Application Details
+
+    </p>
+
+</header>
+
+
+
+<div class="container">
+
+
+
+<!-- APPLICATION STATUS -->
+
+<div class="box">
+
+
+    <h2>
+
+        Application Status
+
+    </h2>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Application ID:
+
+        </span>
+
+        {{ application['id'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Current Status:
+
+        </span>
+
+
+        {% if application['status'] == 'Approved' %}
+
+            <span class="status approved">
+
+                Approved
+
+            </span>
+
+
+        {% elif application['status'] == 'Rejected' %}
+
+            <span class="status rejected">
+
+                Rejected
+
+            </span>
+
+
+        {% else %}
+
+            <span class="status pending">
+
+                Pending
+
+            </span>
+
+        {% endif %}
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- STUDENT INFORMATION -->
+
+<div class="box">
+
+
+    <h2>
+
+        Student Information
+
+    </h2>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Full Name:
+
+        </span>
+
+        {{ application['full_name'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Date of Birth:
+
+        </span>
+
+        {{ application['date_of_birth'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Gender:
+
+        </span>
+
+        {{ application['gender'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Address:
+
+        </span>
+
+        {{ application['address'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Phone:
+
+        </span>
+
+        {{ application['phone'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Email:
+
+        </span>
+
+        {{ application['email'] }}
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ACADEMIC INFORMATION -->
+
+<div class="box">
+
+
+    <h2>
+
+        Academic Information
+
+    </h2>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Applying For:
+
+        </span>
+
+        {{ application['level'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Previous School:
+
+        </span>
+
+        {{ application['previous_school'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Preferred Subjects:
+
+        </span>
+
+        {{ application['subjects'] }}
+
+    </div>
+
+
+</div>
+
+
+
+<!-- GUARDIAN INFORMATION -->
+
+<div class="box">
+
+
+    <h2>
+
+        Parent / Guardian Information
+
+    </h2>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Guardian Name:
+
+        </span>
+
+        {{ application['guardian_name'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Guardian Phone:
+
+        </span>
+
+        {{ application['guardian_phone'] }}
+
+    </div>
+
+
+    <div class="info">
+
+        <span class="label">
+
+            Guardian Email:
+
+        </span>
+
+        {{ application['guardian_email'] }}
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ADDITIONAL INFORMATION -->
+
+<div class="box">
+
+
+    <h2>
+
+        Additional Information
+
+    </h2>
+
+
+    <p>
+
+        {{ application['additional_information'] }}
+
+    </p>
+
+
+</div>
+
+
+
+<!-- ACTION BUTTONS -->
+
+<div class="box">
+
+
+    <h2>
+
+        Application Actions
+
+    </h2>
+
+
+    {% if application['status'] == 'Pending' %}
+
+
+    <form
+
+        method="POST"
+
+        action="/admin/application/{{ application['id'] }}/approve"
+
+        style="display:inline;"
+
+    >
+
+        <button
+
+            type="submit"
+
+            class="button approve"
+
+        >
+
+            Approve Application
+
+        </button>
+
+    </form>
+
+
+
+    <form
+
+        method="POST"
+
+        action="/admin/application/{{ application['id'] }}/reject"
+
+        style="display:inline;"
+
+    >
+
+        <button
+
+            type="submit"
+
+            class="button reject"
+
+        >
+
+            Reject Application
+
+        </button>
+
+    </form>
+
+
+    {% else %}
+
+
+    <p>
+
+        This application has already been processed.
+
+    </p>
+
+
+    {% endif %}
+
+
+    <br>
+
+
+    <a
+
+        href="/admin/dashboard"
+
+        class="button back"
+
+    >
+
+        Back to Applications
+
+    </a>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

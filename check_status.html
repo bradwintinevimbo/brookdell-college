@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Check Application Status | Brookdell College
+    </title>
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f7fb;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        header {
+
+            background: #123c69;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+        }
+
+
+        .container {
+
+            max-width: 600px;
+
+            margin: 40px auto;
+
+            padding: 20px;
+
+        }
+
+
+        .box {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+            0 4px 10px
+            rgba(0,0,0,0.1);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        h2 {
+
+            color: #123c69;
+
+        }
+
+
+        label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border:
+            1px solid #ccc;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+        }
+
+
+        button {
+
+            margin-top: 20px;
+
+            padding: 12px 25px;
+
+            background: #123c69;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+        }
+
+
+        button:hover {
+
+            background: #1d5d94;
+
+        }
+
+
+        .result {
+
+            text-align: center;
+
+        }
+
+
+        .status {
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            margin: 20px 0;
+
+        }
+
+
+        .pending {
+
+            color: #f57c00;
+
+        }
+
+
+        .approved {
+
+            color: #2e7d32;
+
+        }
+
+
+        .rejected {
+
+            color: #c62828;
+
+        }
+
+
+        .error {
+
+            background: #ffebee;
+
+            color: #c62828;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .back {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            color: #123c69;
+
+            text-decoration: none;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+
+        Brookdell College
+
+    </h1>
+
+
+    <p>
+
+        Check Your Application Status
+
+    </p>
+
+</header>
+
+
+
+<div class="container">
+
+
+    <div class="box">
+
+
+        <h2>
+
+            Application Status Checker
+
+        </h2>
+
+
+        <p>
+
+            Enter your Application ID and
+            the email address you used
+            when applying.
+
+        </p>
+
+
+        <form
+
+            method="POST"
+
+            action="/check-status"
+
+        >
+
+
+            <label>
+
+                Application ID
+
+            </label>
+
+
+            <input
+
+                type="number"
+
+                name="application_id"
+
+                placeholder="Enter your Application ID"
+
+                required
+
+            >
+
+
+
+            <label>
+
+                Email Address
+
+            </label>
+
+
+            <input
+
+                type="email"
+
+                name="email"
+
+                placeholder="Enter your email address"
+
+                required
+
+            >
+
+
+            <button type="submit">
+
+                Check Status
+
+            </button>
+
+
+        </form>
+
+
+        {% if error %}
+
+
+        <div class="error">
+
+            {{ error }}
+
+        </div>
+
+
+        {% endif %}
+
+
+    </div>
+
+
+
+    {% if application %}
+
+
+    <div class="box result">
+
+
+        <h2>
+
+            Application Found
+
+        </h2>
+
+
+        <p>
+
+            Applicant:
+
+            <strong>
+
+                {{ application["full_name"] }}
+
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Application ID:
+
+            <strong>
+
+                {{ application["id"] }}
+
+            </strong>
+
+        </p>
+
+
+
+        {% if application["status"] == "Approved" %}
+
+
+            <div class="status approved">
+
+                Application Approved
+
+            </div>
+
+
+            <p>
+
+                Congratulations!
+
+                Your application to
+                Brookdell College has been
+                approved.
+
+            </p>
+
+
+        {% elif application["status"] == "Rejected" %}
+
+
+            <div class="status rejected">
+
+                Application Rejected
+
+            </div>
+
+
+            <p>
+
+                Unfortunately, your application
+                was not successful.
+
+                Please contact Brookdell College
+                for more information.
+
+            </p>
+
+
+        {% else %}
+
+
+            <div class="status pending">
+
+                Application Pending
+
+            </div>
+
+
+            <p>
+
+                Your application is still being
+                reviewed by the admissions team.
+
+                Please check again later.
+
+            </p>
+
+
+        {% endif %}
+
+
+    </div>
+
+
+    {% endif %}
+
+
+    <a
+
+        href="/"
+
+        class="back"
+
+    >
+
+        ← Back to Home
+
+    </a>
+
+
+</div>
+
+
+</body>
+
+</html>

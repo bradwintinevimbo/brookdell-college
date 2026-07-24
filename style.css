@@ -1,0 +1,1286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+color: #333;
+background-color: #f5f7fa;
+}
+
+/* Header */
+header {
+background-color: #0b2d4d;
+color: white;
+padding: 20px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo h1 {
+font-size: 28px;
+}
+
+.logo p {
+font-size: 13px;
+letter-spacing: 1px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 25px;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #f4c542;
+}
+
+/* Hero Section */
+.hero {
+min-height: 500px;
+background: linear-gradient(
+rgba(11, 45, 77, 0.85),
+rgba(11, 45, 77, 0.85)
+);
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 40px 20px;
+}
+
+.hero-content h2 {
+font-size: 48px;
+margin-bottom: 15px;
+}
+
+.hero-content p {
+font-size: 20px;
+margin-bottom: 30px;
+}
+
+/* Buttons */
+.button {
+display: inline-block;
+background-color: #f4c542;
+color: #0b2d4d;
+padding: 12px 25px;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.button:hover {
+background-color: white;
+}
+
+/* General Sections */
+.section {
+padding: 70px 10%;
+text-align: center;
+}
+
+.section h2 {
+color: #0b2d4d;
+font-size: 34px;
+margin-bottom: 25px;
+}
+
+.section p {
+max-width: 800px;
+margin: 10px auto;
+}
+
+/* Courses */
+.courses {
+background-color: white;
+}
+
+.course-container {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.course-card {
+background-color: #f5f7fa;
+width: 280px;
+padding: 30px 20px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+}
+
+.course-card:hover {
+transform: translateY(-8px);
+}
+
+.course-card h3 {
+color: #0b2d4d;
+margin-bottom: 15px;
+}
+
+/* Contact */
+.contact {
+background-color: #e9eef3;
+}
+
+.contact p {
+margin: 12px auto;
+}
+
+/* Footer */
+footer {
+background-color: #0b2d4d;
+color: white;
+text-align: center;
+padding: 25px;
+}
+
+footer p {
+margin: 5px;
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+```
+header {
+    flex-direction: column;
+    text-align: center;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 5px;
+    display: inline-block;
+}
+
+.hero-content h2 {
+    font-size: 34px;
+}
+
+.hero-content p {
+    font-size: 17px;
+}
+```
+
+}
+/* =========================
+BROOKDELL COLLEGE ANIMATIONS
+========================= */
+
+/* Hero content animation */
+.hero-content {
+animation: fadeInUp 1.2s ease-out;
+}
+
+/* Button animation */
+.button {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Course cards animation */
+.course-card {
+animation: fadeInUp 1s ease-out;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+transform: translateY(-10px) scale(1.03);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation animation */
+nav a {
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+transform: translateY(-2px);
+}
+
+/* Fade in and move upward */
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+
+```
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+```
+
+}
+
+/* Header animation */
+header {
+animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+from {
+opacity: 0;
+transform: translateY(-30px);
+}
+
+```
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+```
+
+}
+/* Scroll reveal animation */
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =========================================
+BROOKDELL COLLEGE - ACADEMICS PAGE
+========================================= */
+
+/* Academics Hero */
+.academic-hero {
+min-height: 380px;
+background: linear-gradient(
+rgba(11, 45, 77, 0.9),
+rgba(11, 45, 77, 0.9)
+);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 60px 20px;
+}
+
+.academic-hero h2 {
+font-size: 48px;
+margin-bottom: 15px;
+}
+
+.academic-hero p {
+font-size: 20px;
+max-width: 700px;
+margin: 10px auto;
+}
+
+.academic-hero .location {
+font-size: 16px;
+opacity: 0.9;
+}
+
+/* Academics Main Section */
+.academics-section {
+padding: 70px 8%;
+text-align: center;
+background-color: #f5f7fa;
+}
+
+.academics-section h2 {
+color: #0b2d4d;
+font-size: 36px;
+margin-bottom: 15px;
+}
+
+.section-intro {
+max-width: 750px;
+margin: 0 auto 40px;
+color: #555;
+}
+
+/* O-Level / A-Level Buttons */
+.level-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-bottom: 40px;
+flex-wrap: wrap;
+}
+
+.level-btn {
+padding: 14px 35px;
+border: 2px solid #0b2d4d;
+background-color: white;
+color: #0b2d4d;
+border-radius: 5px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.level-btn:hover,
+.level-btn.active {
+background-color: #0b2d4d;
+color: white;
+transform: translateY(-3px);
+}
+
+/* Level Content */
+.level-content {
+display: none;
+animation: fadeInUp 0.6s ease;
+}
+
+.level-content.active {
+display: block;
+}
+
+.level-content h3 {
+color: #0b2d4d;
+font-size: 28px;
+margin-bottom: 25px;
+}
+
+/* Category Buttons */
+.category-buttons {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 35px;
+}
+
+.category-btn {
+padding: 11px 20px;
+border: 1px solid #bbb;
+background-color: white;
+color: #333;
+border-radius: 25px;
+cursor: pointer;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+background-color: #0b2d4d;
+color: white;
+border-color: #0b2d4d;
+}
+
+/* Subject Cards */
+.subject-grid {
+display: none;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.subject-grid.active {
+display: grid;
+}
+
+.subject-card {
+background-color: white;
+padding: 30px 20px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+border-top: 4px solid #0b2d4d;
+transition: transform 0.3s ease,
+box-shadow 0.3s ease;
+animation: fadeInUp 0.6s ease;
+}
+
+.subject-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card h4 {
+color: #0b2d4d;
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.subject-card p {
+color: #666;
+font-size: 14px;
+}
+
+/* Find Your Path */
+.find-path {
+padding: 70px 8%;
+text-align: center;
+background-color: white;
+}
+
+.find-path h2 {
+color: #0b2d4d;
+font-size: 36px;
+margin-bottom: 15px;
+}
+
+.find-path > p {
+color: #555;
+margin-bottom: 40px;
+}
+
+.path-container {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+margin-bottom: 40px;
+}
+
+.path-card {
+width: 300px;
+padding: 35px 25px;
+background-color: #f5f7fa;
+border-radius: 10px;
+border: 1px solid #ddd;
+transition: transform 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.path-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.path-card h3 {
+color: #0b2d4d;
+margin-bottom: 15px;
+}
+
+.path-card p {
+color: #666;
+}
+
+/* Navigation Apply Button */
+.nav-apply {
+background-color: #f4c542;
+color: #0b2d4d !important;
+padding: 10px 18px;
+border-radius: 5px;
+}
+
+.nav-apply:hover {
+background-color: white;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-button {
+position: fixed;
+right: 20px;
+bottom: 20px;
+background-color: #25D366;
+color: white;
+padding: 14px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+z-index: 2000;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+transform: scale(1.08);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+```
+.academic-hero {
+    min-height: 320px;
+}
+
+.academic-hero h2 {
+    font-size: 36px;
+}
+
+.academic-hero p {
+    font-size: 17px;
+}
+
+.academics-section {
+    padding: 50px 5%;
+}
+
+.academics-section h2 {
+    font-size: 30px;
+}
+
+.subject-grid {
+    grid-template-columns: 1fr;
+}
+
+.level-btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+.category-btn {
+    width: 100%;
+    max-width: 320px;
+}
+
+.path-card {
+    width: 100%;
+    max-width: 350px;
+}
+
+.whatsapp-button {
+    right: 15px;
+    bottom: 15px;
+    padding: 12px 16px;
+}
+```
+
+}
+/* =========================================
+HOMEPAGE - NEW SECTIONS
+========================================= */
+
+/* Logo Placeholder */
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.logo-placeholder {
+width: 50px;
+height: 50px;
+background-color: white;
+color: #0b2d4d;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+font-size: 18px;
+}
+
+/* Hero Improvements */
+.hero-small {
+font-size: 15px;
+letter-spacing: 3px;
+margin-bottom: 10px;
+}
+
+.hero-content h3 {
+font-size: 24px;
+margin-bottom: 15px;
+}
+
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin: 25px 0;
+}
+
+.secondary-button {
+background-color: transparent;
+color: white;
+border: 2px solid white;
+}
+
+.secondary-button:hover {
+background-color: white;
+color: #0b2d4d;
+}
+
+/* Achievements */
+.achievements {
+background-color: #0b2d4d;
+color: white;
+text-align: center;
+padding: 70px 8%;
+}
+
+.achievements h2 {
+font-size: 36px;
+margin-bottom: 40px;
+}
+
+.stats-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.stat-card {
+background-color: white;
+color: #0b2d4d;
+width: 280px;
+padding: 35px 20px;
+border-radius: 10px;
+transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+transform: translateY(-8px);
+}
+
+.stat-card h3 {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+/* Examination Pathways */
+.exam-pathways {
+background-color: #f5f7fa;
+}
+
+.exam-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.exam-card {
+background-color: white;
+width: 420px;
+padding: 40px 30px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.exam-card h3 {
+color: #0b2d4d;
+font-size: 28px;
+}
+
+.available,
+.coming-soon {
+display: inline-block;
+margin: 15px 0;
+padding: 7px 15px;
+border-radius: 20px;
+font-weight: bold;
+font-size: 13px;
+}
+
+.available {
+background-color: #d9f5e3;
+color: #176b3a;
+}
+
+.coming-soon {
+background-color: #eeeeee;
+color: #555;
+}
+
+/* Why Choose Us */
+.why-us {
+background-color: white;
+}
+
+.feature-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 30px auto 0;
+}
+
+.feature-card {
+padding: 30px 20px;
+background-color: #f5f7fa;
+border-radius: 10px;
+transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+transform: translateY(-7px);
+}
+
+.feature-card h3 {
+color: #0b2d4d;
+margin-bottom: 10px;
+}
+
+/* Admissions CTA */
+.admissions-cta {
+background-color: #0b2d4d;
+color: white;
+text-align: center;
+padding: 80px 8%;
+}
+
+.admissions-cta h2 {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.admissions-cta p {
+margin-bottom: 30px;
+}
+
+/* Student Life */
+.life-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 35px auto 0;
+}
+
+.life-card {
+min-height: 160px;
+background-color: #0b2d4d;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 10px;
+padding: 20px;
+transition: transform 0.3s ease;
+}
+
+.life-card:hover {
+transform: scale(1.03);
+}
+
+/* Gallery */
+.gallery {
+background-color: #f5f7fa;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+max-width: 1000px;
+margin: 35px auto 0;
+}
+
+.gallery-placeholder {
+height: 180px;
+background-color: #dfe4e8;
+color: #0b2d4d;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 8px;
+font-weight: bold;
+}
+
+/* News */
+.news-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 35px auto 0;
+}
+
+.news-card {
+background-color: white;
+padding: 30px 20px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.news-card h3 {
+color: #0b2d4d;
+margin-bottom: 15px;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin-top: 25px;
+}
+
+/* Modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 3000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.6);
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+.modal-content {
+background-color: white;
+width: 100%;
+max-width: 500px;
+padding: 35px;
+border-radius: 10px;
+position: relative;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+.modal-content h2 {
+color: #0b2d4d;
+margin-bottom: 25px;
+}
+
+.modal-content label {
+display: block;
+margin-top: 15px;
+font-weight: bold;
+}
+
+.modal-content input {
+width: 100%;
+padding: 12px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.modal-content .button {
+margin-top: 25px;
+border: none;
+cursor: pointer;
+}
+
+.close {
+position: absolute;
+right: 20px;
+top: 10px;
+font-size: 30px;
+cursor: pointer;
+color: #555;
+}
+
+/* Mobile Homepage */
+@media (max-width: 768px) {
+
+```
+.logo {
+    flex-direction: column;
+}
+
+.feature-container,
+.life-container,
+.news-container {
+    grid-template-columns: 1fr;
+}
+
+.gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.exam-card {
+    width: 100%;
+}
+
+.stat-card {
+    width: 100%;
+    max-width: 350px;
+}
+
+.admissions-cta h2 {
+    font-size: 30px;
+}
+```
+
+}
+/* =========================================
+HOMEPAGE - NEW SECTIONS
+========================================= */
+
+/* Logo Placeholder */
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.logo-placeholder {
+width: 50px;
+height: 50px;
+background-color: white;
+color: #0b2d4d;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+font-size: 18px;
+}
+
+/* Hero Improvements */
+.hero-small {
+font-size: 15px;
+letter-spacing: 3px;
+margin-bottom: 10px;
+}
+
+.hero-content h3 {
+font-size: 24px;
+margin-bottom: 15px;
+}
+
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin: 25px 0;
+}
+
+.secondary-button {
+background-color: transparent;
+color: white;
+border: 2px solid white;
+}
+
+.secondary-button:hover {
+background-color: white;
+color: #0b2d4d;
+}
+
+/* Achievements */
+.achievements {
+background-color: #0b2d4d;
+color: white;
+text-align: center;
+padding: 70px 8%;
+}
+
+.achievements h2 {
+font-size: 36px;
+margin-bottom: 40px;
+}
+
+.stats-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.stat-card {
+background-color: white;
+color: #0b2d4d;
+width: 280px;
+padding: 35px 20px;
+border-radius: 10px;
+transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+transform: translateY(-8px);
+}
+
+.stat-card h3 {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+/* Examination Pathways */
+.exam-pathways {
+background-color: #f5f7fa;
+}
+
+.exam-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.exam-card {
+background-color: white;
+width: 420px;
+padding: 40px 30px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.exam-card h3 {
+color: #0b2d4d;
+font-size: 28px;
+}
+
+.available,
+.coming-soon {
+display: inline-block;
+margin: 15px 0;
+padding: 7px 15px;
+border-radius: 20px;
+font-weight: bold;
+font-size: 13px;
+}
+
+.available {
+background-color: #d9f5e3;
+color: #176b3a;
+}
+
+.coming-soon {
+background-color: #eeeeee;
+color: #555;
+}
+
+/* Why Choose Us */
+.why-us {
+background-color: white;
+}
+
+.feature-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 30px auto 0;
+}
+
+.feature-card {
+padding: 30px 20px;
+background-color: #f5f7fa;
+border-radius: 10px;
+transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+transform: translateY(-7px);
+}
+
+.feature-card h3 {
+color: #0b2d4d;
+margin-bottom: 10px;
+}
+
+/* Admissions CTA */
+.admissions-cta {
+background-color: #0b2d4d;
+color: white;
+text-align: center;
+padding: 80px 8%;
+}
+
+.admissions-cta h2 {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.admissions-cta p {
+margin-bottom: 30px;
+}
+
+/* Student Life */
+.life-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 35px auto 0;
+}
+
+.life-card {
+min-height: 160px;
+background-color: #0b2d4d;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 10px;
+padding: 20px;
+transition: transform 0.3s ease;
+}
+
+.life-card:hover {
+transform: scale(1.03);
+}
+
+/* Gallery */
+.gallery {
+background-color: #f5f7fa;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+max-width: 1000px;
+margin: 35px auto 0;
+}
+
+.gallery-placeholder {
+height: 180px;
+background-color: #dfe4e8;
+color: #0b2d4d;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 8px;
+font-weight: bold;
+}
+
+/* News */
+.news-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1000px;
+margin: 35px auto 0;
+}
+
+.news-card {
+background-color: white;
+padding: 30px 20px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.news-card h3 {
+color: #0b2d4d;
+margin-bottom: 15px;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin-top: 25px;
+}
+
+/* Modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 3000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.6);
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+.modal-content {
+background-color: white;
+width: 100%;
+max-width: 500px;
+padding: 35px;
+border-radius: 10px;
+position: relative;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+.modal-content h2 {
+color: #0b2d4d;
+margin-bottom: 25px;
+}
+
+.modal-content label {
+display: block;
+margin-top: 15px;
+font-weight: bold;
+}
+
+.modal-content input {
+width: 100%;
+padding: 12px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.modal-content .button {
+margin-top: 25px;
+border: none;
+cursor: pointer;
+}
+
+.close {
+position: absolute;
+right: 20px;
+top: 10px;
+font-size: 30px;
+cursor: pointer;
+color: #555;
+}
+
+/* Mobile Homepage */
+@media (max-width: 768px) {
+
+```
+.logo {
+    flex-direction: column;
+}
+
+.feature-container,
+.life-container,
+.news-container {
+    grid-template-columns: 1fr;
+}
+
+.gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.exam-card {
+    width: 100%;
+}
+
+.stat-card {
+    width: 100%;
+    max-width: 350px;
+}
+
+.admissions-cta h2 {
+    font-size: 30px;
+}
+```
+
+}
