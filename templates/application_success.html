@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Application Submitted | Brookdell College
+    </title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #123c69;
+        }
+
+        .application-id {
+            background: #e8f1fa;
+            border: 2px solid #123c69;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .application-id strong {
+            display: block;
+            font-size: 32px;
+            color: #123c69;
+            margin-top: 10px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #123c69;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>
+        Application Submitted Successfully!
+    </h1>
+
+    <p>
+        Thank you for applying to
+        <strong>Brookdell College</strong>.
+    </p>
+
+    <div class="application-id">
+
+        <p>
+            Your Application ID is:
+        </p>
+
+        <strong>
+            {{ application_id }}
+        </strong>
+
+    </div>
+
+    <div class="warning">
+
+        <strong>
+            Important:
+        </strong>
+
+        <p>
+            Please save or write down your
+            Application ID.
+        </p>
+
+        <p>
+            You will need your Application ID
+            and email address to check your
+            application status.
+        </p>
+
+    </div>
+
+    <p>
+        Your application is currently
+        <strong>Pending Review</strong>.
+    </p>
+
+    <a href="/check-status">
+        Check Application Status
+    </a>
+
+    <br>
+
+    <a href="/">
+        Return to Home
+    </a>
+
+</div>
+
+</body>
+
+</html>

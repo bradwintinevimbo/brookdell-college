@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Academics | Brookdell College</title>
+
+<meta name="description"
+      content="Explore O-Level and A-Level academic pathways and subjects at Brookdell College in Hauna Growth Point, Honde Valley, Zimbabwe.">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <h1>Brookdell College</h1>
+        <p>Discipline • Diligence • Excellence</p>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/#about">About Us</a>
+        <a href="/academics">Academics</a>
+        <a href="/#contact">Contact</a>
+        <a href="/#contact" class="nav-apply">Apply Now</a>
+    </nav>
+</header>
+
+
+<!-- Academics Hero -->
+<section class="academic-hero">
+    <div>
+        <h2>Our Academics</h2>
+
+        <p>
+            Discover your potential through quality education,
+            discipline, diligence and excellence.
+        </p>
+
+        <p class="location">
+            Hauna Growth Point, Honde Valley, Zimbabwe
+        </p>
+    </div>
+</section>
+
+
+<!-- Academic Programmes -->
+<section class="academics-section">
+
+    <h2>Academic Pathways</h2>
+
+    <p class="section-intro">
+        Brookdell College offers O-Level and A-Level education
+        across Science, Commercial, Arts & Humanities,
+        Practical and Technical subject areas.
+    </p>
+
+
+    <!-- Level Buttons -->
+    <div class="level-buttons">
+
+        <button class="level-btn active"
+                onclick="showLevel('olevel', this)">
+            O-LEVEL
+        </button>
+
+        <button class="level-btn"
+                onclick="showLevel('alevel', this)">
+            A-LEVEL
+        </button>
+
+    </div>
+
+
+    <!-- O-LEVEL -->
+    <div id="olevel" class="level-content active">
+
+        <h3>O-Level Subjects</h3>
+
+        <div class="category-buttons">
+
+            <button onclick="showCategory('o-science', this)"
+                    class="category-btn active">
+                Science
+            </button>
+
+            <button onclick="showCategory('o-commercial', this)"
+                    class="category-btn">
+                Commercial
+            </button>
+
+            <button onclick="showCategory('o-arts', this)"
+                    class="category-btn">
+                Arts & Humanities
+            </button>
+
+            <button onclick="showCategory('o-practical', this)"
+                    class="category-btn">
+                Practical & Technical
+            </button>
+
+        </div>
+
+
+        <!-- O-Level Science -->
+        <div id="o-science" class="subject-grid category-content active">
+
+            <div class="subject-card">
+                <h4>Mathematics</h4>
+                <p>Develop logical thinking and problem-solving skills.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Physics</h4>
+                <p>Explore matter, energy and the laws of nature.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Biology</h4>
+                <p>Study living organisms and the world around us.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Chemistry</h4>
+                <p>Discover substances, reactions and scientific principles.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Geography</h4>
+                <p>Understand people, places and the physical environment.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Agricultural Science</h4>
+                <p>Learn about agriculture, farming and sustainable practices.</p>
+            </div>
+
+        </div>
+
+
+        <!-- O-Level Commercial -->
+        <div id="o-commercial" class="subject-grid category-content">
+
+            <div class="subject-card">
+                <h4>Business Studies</h4>
+                <p>Learn the fundamentals of business and entrepreneurship.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Economics</h4>
+                <p>Understand economic systems and decision-making.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Commerce</h4>
+                <p>Explore trade, business and commercial activities.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Accounting</h4>
+                <p>Develop knowledge of financial records and accounting.</p>
+            </div>
+
+        </div>
+
+
+        <!-- O-Level Arts -->
+        <div id="o-arts" class="subject-grid category-content">
+
+            <div class="subject-card">
+                <h4>History</h4>
+                <p>Explore important events and civilizations of the past.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Family & Religious Studies (FRS)</h4>
+                <p>Develop knowledge of religion, family and society.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Heritage Studies</h4>
+                <p>Discover Zimbabwean heritage, culture and identity.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Shona</h4>
+                <p>Develop communication and appreciation of the Shona language.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>English Literature</h4>
+                <p>Explore literature, creativity and critical thinking.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Shona Literature</h4>
+                <p>Explore Shona literary works and cultural expression.</p>
+            </div>
+
+        </div>
+
+
+        <!-- O-Level Practical -->
+        <div id="o-practical" class="subject-grid category-content">
+
+            <div class="subject-card">
+                <h4>Building Technology</h4>
+                <p>Develop practical knowledge of building and construction.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Computer Science</h4>
+                <p>Learn computing, programming and digital technology.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Food Technology</h4>
+                <p>Explore food preparation, processing and technology.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Agriculture</h4>
+                <p>Develop practical knowledge and skills in agriculture.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Woodwork</h4>
+                <p>Develop practical skills in woodworking and design.</p>
+            </div>
+
+            <div class="subject-card">
+                <h4>Fashion & Fabrics</h4>
+                <p>Explore fashion design, textiles and practical skills.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- A-LEVEL -->
+    <div id="alevel" class="level-content">
+
+        <h3>A-Level Subjects</h3>
+
+        <div class="category-buttons">
+
+            <button onclick="showCategory('a-science', this)"
+                    class="category-btn active">
+                Science & Technical
+            </button>
+
+            <button onclick="showCategory('a-commercial', this)"
+                    class="category-btn">
+                Commercial
+            </button>
+
+            <button onclick="showCategory('a-arts', this)"
+                    class="category-btn">
+                Arts & Humanities
+            </button>
+
+        </div>
+
+
+        <!-- A-Level Science -->
+        <div id="a-science" class="subject-grid category-content active">
+
+            <div class="subject-card">
+                <h4>Chemistry</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Physics</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Biology</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Crop Science</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Computer Science</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Pure Mathematics</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Geography</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Statistics</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Building Technology</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Other available subjects</h4>
+                <p>Subject information can be updated by the college.</p>
+            </div>
+
+        </div>
+
+
+        <!-- A-Level Commercial -->
+        <div id="a-commercial" class="subject-grid category-content">
+
+            <div class="subject-card">
+                <h4>Economics</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Business Economics & Studies (BES)</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Accounting</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Other available subjects</h4>
+                <p>Subject information can be updated by the college.</p>
+            </div>
+
+        </div>
+
+
+        <!-- A-Level Arts -->
+        <div id="a-arts" class="subject-grid category-content">
+
+            <div class="subject-card">
+                <h4>Shona Literature</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>English Literature</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>History</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Heritage Studies</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Family & Religious Studies (FRS)</h4>
+            </div>
+
+            <div class="subject-card">
+                <h4>Other available subjects</h4>
+                <p>Subject information can be updated by the college.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Find Your Path -->
+<section class="find-path">
+
+    <h2>Find Your Path</h2>
+
+    <p>
+        Discover the academic pathway that matches your interests
+        and future goals.
+    </p>
+
+    <div class="path-container">
+
+        <div class="path-card">
+            <h3>I'm Interested in Science</h3>
+            <p>
+                Explore scientific subjects and develop
+                critical thinking and problem-solving skills.
+            </p>
+        </div>
+
+        <div class="path-card">
+            <h3>I'm Interested in Business</h3>
+            <p>
+                Discover business, economics, accounting
+                and commercial opportunities.
+            </p>
+        </div>
+
+        <div class="path-card">
+            <h3>I'm Interested in Arts</h3>
+            <p>
+                Explore history, literature, culture
+                and the humanities.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="/#contact" class="button">
+        Apply Now
+    </a>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <h3>Brookdell College</h3>
+
+    <p>Discipline • Diligence • Excellence</p>
+
+    <p>
+        Hauna Growth Point, Honde Valley, Zimbabwe
+    </p>
+
+    <p>
+        Phone: +263 716 916 277
+    </p>
+
+    <p>
+        WhatsApp: +263 774 092 688
+    </p>
+
+    <p>
+        Email: brookdellcollege@gmail.com
+    </p>
+
+    <p>
+        &copy; 2026 Brookdell College. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/263774092688"
+   class="whatsapp-button"
+   target="_blank"
+   aria-label="Chat with Brookdell College on WhatsApp">
+    WhatsApp
+</a>
+
+
+<!-- JavaScript -->
+<script>
+
+    function showLevel(level, button) {
+
+        document.querySelectorAll('.level-content')
+            .forEach(content => {
+                content.classList.remove('active');
+            });
+
+        document.getElementById(level)
+            .classList.add('active');
+
+        document.querySelectorAll('.level-btn')
+            .forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+        button.classList.add('active');
+    }
+
+
+    function showCategory(category, button) {
+
+        const parent = button.closest('.level-content');
+
+        parent.querySelectorAll('.category-content')
+            .forEach(content => {
+                content.classList.remove('active');
+            });
+
+        document.getElementById(category)
+            .classList.add('active');
+
+        parent.querySelectorAll('.category-btn')
+            .forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+        button.classList.add('active');
+    }
+
+</script>
+
+
+</body>
+</html>
